@@ -4,7 +4,7 @@ using NetCoreWebApiPoC.Domain.Entities;
 
 namespace NetCoreWebApiPoC.Application.Interfaces
 {
-    public interface ITodoContext
+    public interface INetCoreWebApiPoCContext
     {
         DbSet<Todo> Todos { get; set; }
         int SaveChanges();

@@ -19,7 +19,7 @@ namespace NetCoreWebApiPoC.WebUI
                 var services = scope.ServiceProvider;
                 try
                 {
-                    var context = services.GetRequiredService<ITodoContext>();
+                    var context = services.GetRequiredService<INetCoreWebApiPoCContext>();
                     DbInitializer.Initialize(context);
                 }
                 catch (Exception ex)

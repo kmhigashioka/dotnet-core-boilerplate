@@ -15,9 +15,9 @@ namespace NetCoreWebApiPoC.Application.Todos.Commands.NewTodo
 
     public class NewTodoCommandHandler : IRequestHandler<NewTodoCommand, TodoDto>
     {
-        private readonly ITodoContext _context;
+        private readonly INetCoreWebApiPoCContext _context;
 
-        public NewTodoCommandHandler(ITodoContext context)
+        public NewTodoCommandHandler(INetCoreWebApiPoCContext context)
         {
             _context = context;
         }
