@@ -10,7 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using NetCoreWebApiPoC.Application.Interfaces;
 using NetCoreWebApiPoC.Application.Todos.Commands.NewTodo;
 using NetCoreWebApiPoC.Domain.Entities;
-using NetCoreWebApiPoc.Persistence;
+using NetCoreWebApiPoC.Persistence;
 using NetCoreWebApiPoC.WebUI.Configuration;
 
 namespace NetCoreWebApiPoC.WebUI

@@ -7,13 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreWebApiPoC.Domain", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreWebApiPoC.Application", "NetCoreWebApiPoC.Application\NetCoreWebApiPoC.Application.csproj", "{AE9D8043-B700-41BF-B968-B6F524732A52}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreWebApiPoc.Persistence", "NetCoreWebApiPoc.Persistence\NetCoreWebApiPoc.Persistence.csproj", "{D7B88506-4CB3-456B-9344-86EDEB2DBB14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreWebApiPoC.Persistence", "NetCoreWebApiPoc.Persistence\NetCoreWebApiPoC.Persistence.csproj", "{D7B88506-4CB3-456B-9344-86EDEB2DBB14}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreWebApiPoC.WebUI", "NetCoreWebApiPoC.WebUI\NetCoreWebApiPoC.WebUI.csproj", "{BCF07414-8423-4018-B246-361239CA644F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreWebApiPoC.Application.Tests", "NetCoreWebApiPoC.Application.Tests\NetCoreWebApiPoC.Application.Tests.csproj", "{AEB3714F-89EE-4919-87A0-121AA86C869B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreWebApiPoC.WebUI.FunctionalTests", "NetCoreWebApiPoC.WebUI.FunctionalTests\NetCoreWebApiPoC.WebUI.FunctionalTests.csproj", "{8D3CEF0E-6A08-465C-AFE0-31229ED399BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreWebApiPoC.WebUI.FunctionalTests", "NetCoreWebApiPoC.WebUI.FunctionalTests\NetCoreWebApiPoC.WebUI.FunctionalTests.csproj", "{8D3CEF0E-6A08-465C-AFE0-31229ED399BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

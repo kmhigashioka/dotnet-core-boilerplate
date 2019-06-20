@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using NetCoreWebApiPoC.Application.Interfaces;
-using NetCoreWebApiPoc.Persistence;
+using NetCoreWebApiPoC.Persistence;
 
 namespace NetCoreWebApiPoC.WebUI
 {

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using NetCoreWebApiPoC.Application.Interfaces;
 using NetCoreWebApiPoC.Domain.Entities;
 
-namespace NetCoreWebApiPoc.Persistence
+namespace NetCoreWebApiPoC.Persistence
 {
     public class TodoContext : IdentityDbContext<ApplicationUser>, ITodoContext
     {

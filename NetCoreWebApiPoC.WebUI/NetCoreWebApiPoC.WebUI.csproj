@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NetCoreWebApiPoc.Persistence\NetCoreWebApiPoc.Persistence.csproj" />
+    <ProjectReference Include="..\NetCoreWebApiPoc.Persistence\NetCoreWebApiPoC.Persistence.csproj" />
   </ItemGroup>
 
 </Project>
