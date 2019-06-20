@@ -1,15 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2000
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreWebApiPoC", "NetCoreWebApiPoC\NetCoreWebApiPoC.csproj", "{BF4266C3-9DBE-4159-AE95-3EB40CABD331}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreWebApiPoC.Domain", "NetCoreWebApiPoC.Domain\NetCoreWebApiPoC.Domain.csproj", "{10666C23-F8B1-440C-8AC1-1283554EBEED}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreWebApiPoC.Data", "NetCoreWebApiPoC.Data\NetCoreWebApiPoC.Data.csproj", "{30110F30-136F-42AD-9231-98D8D292A4EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreWebApiPoC.Application", "NetCoreWebApiPoC.Application\NetCoreWebApiPoC.Application.csproj", "{AE9D8043-B700-41BF-B968-B6F524732A52}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreWebApiPoC.Domain", "NetCoreWebApiPoC.Domain\NetCoreWebApiPoC.Domain.csproj", "{00DEACDE-AE3E-4893-9719-52F1B72865C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreWebApiPoC.Persistence", "NetCoreWebApiPoc.Persistence\NetCoreWebApiPoC.Persistence.csproj", "{D7B88506-4CB3-456B-9344-86EDEB2DBB14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreWebApiPoC.Test", "NetCoreWebApiPoC.Test\NetCoreWebApiPoC.Test.csproj", "{08EE0EB2-6F09-4B3D-B6E2-D0D32E60396D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreWebApiPoC.WebUI", "NetCoreWebApiPoC.WebUI\NetCoreWebApiPoC.WebUI.csproj", "{BCF07414-8423-4018-B246-361239CA644F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreWebApiPoC.Application.Tests", "NetCoreWebApiPoC.Application.Tests\NetCoreWebApiPoC.Application.Tests.csproj", "{AEB3714F-89EE-4919-87A0-121AA86C869B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreWebApiPoC.WebUI.FunctionalTests", "NetCoreWebApiPoC.WebUI.FunctionalTests\NetCoreWebApiPoC.WebUI.FunctionalTests.csproj", "{8D3CEF0E-6A08-465C-AFE0-31229ED399BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,22 +21,30 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BF4266C3-9DBE-4159-AE95-3EB40CABD331}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BF4266C3-9DBE-4159-AE95-3EB40CABD331}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BF4266C3-9DBE-4159-AE95-3EB40CABD331}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BF4266C3-9DBE-4159-AE95-3EB40CABD331}.Release|Any CPU.Build.0 = Release|Any CPU
-		{30110F30-136F-42AD-9231-98D8D292A4EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{30110F30-136F-42AD-9231-98D8D292A4EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{30110F30-136F-42AD-9231-98D8D292A4EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{30110F30-136F-42AD-9231-98D8D292A4EB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{00DEACDE-AE3E-4893-9719-52F1B72865C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{00DEACDE-AE3E-4893-9719-52F1B72865C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{00DEACDE-AE3E-4893-9719-52F1B72865C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{00DEACDE-AE3E-4893-9719-52F1B72865C3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{08EE0EB2-6F09-4B3D-B6E2-D0D32E60396D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{08EE0EB2-6F09-4B3D-B6E2-D0D32E60396D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{08EE0EB2-6F09-4B3D-B6E2-D0D32E60396D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{08EE0EB2-6F09-4B3D-B6E2-D0D32E60396D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10666C23-F8B1-440C-8AC1-1283554EBEED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10666C23-F8B1-440C-8AC1-1283554EBEED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10666C23-F8B1-440C-8AC1-1283554EBEED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10666C23-F8B1-440C-8AC1-1283554EBEED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE9D8043-B700-41BF-B968-B6F524732A52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE9D8043-B700-41BF-B968-B6F524732A52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE9D8043-B700-41BF-B968-B6F524732A52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE9D8043-B700-41BF-B968-B6F524732A52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7B88506-4CB3-456B-9344-86EDEB2DBB14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7B88506-4CB3-456B-9344-86EDEB2DBB14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7B88506-4CB3-456B-9344-86EDEB2DBB14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7B88506-4CB3-456B-9344-86EDEB2DBB14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCF07414-8423-4018-B246-361239CA644F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCF07414-8423-4018-B246-361239CA644F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCF07414-8423-4018-B246-361239CA644F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCF07414-8423-4018-B246-361239CA644F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEB3714F-89EE-4919-87A0-121AA86C869B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEB3714F-89EE-4919-87A0-121AA86C869B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEB3714F-89EE-4919-87A0-121AA86C869B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEB3714F-89EE-4919-87A0-121AA86C869B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D3CEF0E-6A08-465C-AFE0-31229ED399BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D3CEF0E-6A08-465C-AFE0-31229ED399BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D3CEF0E-6A08-465C-AFE0-31229ED399BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D3CEF0E-6A08-465C-AFE0-31229ED399BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
