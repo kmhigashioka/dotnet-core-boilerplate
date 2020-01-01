@@ -13,7 +13,6 @@ using NetCoreWebApiPoC.Application.Interfaces;
 using NetCoreWebApiPoC.Application.Todos.Commands.NewTodo;
 using NetCoreWebApiPoC.Domain.Entities;
 using NetCoreWebApiPoC.WebUI.Configuration;
-using Swashbuckle.AspNetCore.Swagger;
 using AppContext = NetCoreWebApiPoC.Persistence.AppContext;
 
 namespace NetCoreWebApiPoC.WebUI
@@ -59,7 +58,9 @@ namespace NetCoreWebApiPoC.WebUI
                     options.ApiName = "api1";
                 });
             services.AddScoped<IAppContext>(provider => provider.GetService<AppContext>());
-            services.AddSwaggerGen(provider => provider.SwaggerDoc("latest", new Info()));
+            services.AddSwaggerGen(provider => 
+                provider.SwaggerDoc("latest", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Core API", Description = "Swagger Core API" }
+            ));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -78,7 +79,7 @@ namespace NetCoreWebApiPoC.WebUI
             app.UseSwaggerUI(p =>
             {
                 p.SwaggerEndpoint("/swagger/latest/swagger.json", "default");
-                p.RoutePrefix = String.Empty;
+                p.RoutePrefix = string.Empty;
             });
             app.UseFileServer();
         }
