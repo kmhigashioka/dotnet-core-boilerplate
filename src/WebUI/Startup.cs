@@ -1,5 +1,4 @@
-﻿using System;
-using System.Reflection;
+﻿using System.Reflection;
 using IdentityServer4.AccessTokenValidation;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
@@ -13,7 +12,7 @@ using Application.Interfaces;
 using Application.Todos.Commands.NewTodo;
 using Domain.Entities;
 using WebUI.Configuration;
-using AppContext = Persistence.AppContext;
+using Infrastructure.Persistence;
 
 namespace WebUI
 {
