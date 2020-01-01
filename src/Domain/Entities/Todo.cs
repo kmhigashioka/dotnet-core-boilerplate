@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NetCoreWebApiPoC.Domain.Entities
+namespace Domain.Entities
 {
     public class Todo
     {

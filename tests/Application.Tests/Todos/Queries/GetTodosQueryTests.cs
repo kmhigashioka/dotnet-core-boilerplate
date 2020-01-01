@@ -5,13 +5,13 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Moq;
-using NetCoreWebApiPoC.Application.Interfaces;
-using NetCoreWebApiPoC.Application.Todos.Commands.NewTodo;
-using NetCoreWebApiPoC.Application.Todos.Queries.GetTodos;
-using NetCoreWebApiPoC.Domain.Entities;
+using Application.Interfaces;
+using Application.Todos.Commands.NewTodo;
+using Application.Todos.Queries.GetTodos;
+using Domain.Entities;
 using Xunit;
 
-namespace NetCoreWebApiPoC.Application.Tests.Todos.Queries
+namespace Application.Tests.Todos.Queries
 {
     public class GetTodosQueryTests
     {

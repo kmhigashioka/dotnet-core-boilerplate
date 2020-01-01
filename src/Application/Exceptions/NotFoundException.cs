@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NetCoreWebApiPoC.Application.Exceptions
+namespace Application.Exceptions
 {
     public class NotFoundException : Exception
     {

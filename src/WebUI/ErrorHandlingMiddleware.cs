@@ -2,10 +2,10 @@
 using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
-using NetCoreWebApiPoC.Application.Exceptions;
+using Application.Exceptions;
 using Newtonsoft.Json;
 
-namespace NetCoreWebApiPoC.WebUI
+namespace WebUI
 {
     public class ErrorHandlingMiddleware
     {

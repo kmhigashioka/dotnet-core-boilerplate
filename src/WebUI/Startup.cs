@@ -9,13 +9,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using NetCoreWebApiPoC.Application.Interfaces;
-using NetCoreWebApiPoC.Application.Todos.Commands.NewTodo;
-using NetCoreWebApiPoC.Domain.Entities;
-using NetCoreWebApiPoC.WebUI.Configuration;
-using AppContext = NetCoreWebApiPoC.Persistence.AppContext;
+using Application.Interfaces;
+using Application.Todos.Commands.NewTodo;
+using Domain.Entities;
+using WebUI.Configuration;
+using AppContext = Persistence.AppContext;
 
-namespace NetCoreWebApiPoC.WebUI
+namespace WebUI
 {
     public class Startup
     {

@@ -3,11 +3,11 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
-using NetCoreWebApiPoC.Application.Interfaces;
-using NetCoreWebApiPoC.Domain.Entities;
+using Application.Interfaces;
+using Domain.Entities;
 using Omu.ValueInjecter;
 
-namespace NetCoreWebApiPoC.Application.Todos.Queries.GetTodos
+namespace Application.Todos.Queries.GetTodos
 {
     public class GetTodosQuery : IRequest<List<Todo>>
     {

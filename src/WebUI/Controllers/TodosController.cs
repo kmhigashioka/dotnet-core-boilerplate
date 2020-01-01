@@ -2,13 +2,13 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using NetCoreWebApiPoC.Application.Dto;
-using NetCoreWebApiPoC.Application.Todos.Commands.NewTodo;
-using NetCoreWebApiPoC.Application.Todos.Queries.GetTodos;
-using NetCoreWebApiPoC.Domain.Entities;
+using Application.Dto;
+using Application.Todos.Commands.NewTodo;
+using Application.Todos.Queries.GetTodos;
+using Domain.Entities;
 using System.Collections.Generic;
 
-namespace NetCoreWebApiPoC.WebUI.Controllers
+namespace WebUI.Controllers
 {
     [Produces("application/json")]
     [Route("api/Todos")]

@@ -4,12 +4,12 @@ using System.Threading.Tasks;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
-using NetCoreWebApiPoC.Application.Todos.Queries.GetTodos;
-using NetCoreWebApiPoC.Domain.Entities;
-using NetCoreWebApiPoC.WebUI.Controllers;
+using Application.Todos.Queries.GetTodos;
+using Domain.Entities;
+using WebUI.Controllers;
 using Xunit;
 
-namespace NetCoreWebApiPoC.WebUI.FunctionalTests.Controllers.Todos
+namespace WebUI.FunctionalTests.Controllers.Todos
 {
     public class Get
     {

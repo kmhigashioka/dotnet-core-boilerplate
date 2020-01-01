@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NetCoreWebApiPoC.Application.Dto
+namespace Application.Dto
 {
     public class TodoDto
     {

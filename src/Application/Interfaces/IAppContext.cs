@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using NetCoreWebApiPoC.Domain.Entities;
+using Domain.Entities;
 
-namespace NetCoreWebApiPoC.Application.Interfaces
+namespace Application.Interfaces
 {
     public interface IAppContext
     {

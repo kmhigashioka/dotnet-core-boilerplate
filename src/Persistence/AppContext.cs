@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using NetCoreWebApiPoC.Application.Interfaces;
-using NetCoreWebApiPoC.Domain.Entities;
+using Application.Interfaces;
+using Domain.Entities;
 
-namespace NetCoreWebApiPoC.Persistence
+namespace Persistence
 {
     public class AppContext : IdentityDbContext<ApplicationUser>, IAppContext
     {

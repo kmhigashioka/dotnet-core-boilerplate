@@ -1,12 +1,12 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
-using NetCoreWebApiPoC.Application.Dto;
-using NetCoreWebApiPoC.Application.Interfaces;
-using NetCoreWebApiPoC.Domain.Entities;
+using Application.Dto;
+using Application.Interfaces;
+using Domain.Entities;
 using Omu.ValueInjecter;
 
-namespace NetCoreWebApiPoC.Application.Todos.Commands.NewTodo
+namespace Application.Todos.Commands.NewTodo
 {
     public class NewTodoCommand : IRequest<TodoDto>
     {
