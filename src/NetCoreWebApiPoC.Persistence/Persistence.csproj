@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NetCoreWebApiPoC.Application\NetCoreWebApiPoC.Application.csproj" />
+    <ProjectReference Include="..\NetCoreWebApiPoC.Application\Application.csproj" />
   </ItemGroup>
 
 </Project>

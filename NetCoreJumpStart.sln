@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreWebApiPoC.Domain", "src\NetCoreWebApiPoC.Domain\NetCoreWebApiPoC.Domain.csproj", "{8B202C39-E6BC-4972-B677-0F807C6E7E5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "src\NetCoreWebApiPoC.Domain\Domain.csproj", "{8B202C39-E6BC-4972-B677-0F807C6E7E5E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreWebApiPoC.Persistence", "src\NetCoreWebApiPoC.Persistence\NetCoreWebApiPoC.Persistence.csproj", "{4ACDC612-D838-424B-9FFF-384DC9B50E41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "src\NetCoreWebApiPoC.Persistence\Persistence.csproj", "{4ACDC612-D838-424B-9FFF-384DC9B50E41}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreWebApiPoC.Application", "src\NetCoreWebApiPoC.Application\NetCoreWebApiPoC.Application.csproj", "{CE04CB62-3B01-4940-8586-7DEAA08BDE60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "src\NetCoreWebApiPoC.Application\Application.csproj", "{CE04CB62-3B01-4940-8586-7DEAA08BDE60}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreWebApiPoC.WebUI", "src\NetCoreWebApiPoC.WebUI\NetCoreWebApiPoC.WebUI.csproj", "{28081BAE-5734-438D-8DA9-7CB8B3B33B35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebUI", "src\NetCoreWebApiPoC.WebUI\WebUI.csproj", "{28081BAE-5734-438D-8DA9-7CB8B3B33B35}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreWebApiPoC.Application.Tests", "tests\NetCoreWebApiPoC.Application.Tests\NetCoreWebApiPoC.Application.Tests.csproj", "{3397789F-1368-458C-BCB0-08F0B9D104CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.Tests", "tests\NetCoreWebApiPoC.Application.Tests\Application.Tests.csproj", "{3397789F-1368-458C-BCB0-08F0B9D104CF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreWebApiPoC.WebUI.FunctionalTests", "tests\NetCoreWebApiPoC.WebUI.FunctionalTests\NetCoreWebApiPoC.WebUI.FunctionalTests.csproj", "{BC8833C6-569D-4AC6-A665-281FD562EAAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebUI.FunctionalTests", "tests\NetCoreWebApiPoC.WebUI.FunctionalTests\WebUI.FunctionalTests.csproj", "{BC8833C6-569D-4AC6-A665-281FD562EAAC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

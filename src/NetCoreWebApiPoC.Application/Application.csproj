@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NetCoreWebApiPoC.Domain\NetCoreWebApiPoC.Domain.csproj" />
+    <ProjectReference Include="..\NetCoreWebApiPoC.Domain\Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
