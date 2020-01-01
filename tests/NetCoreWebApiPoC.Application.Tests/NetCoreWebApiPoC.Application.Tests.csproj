@@ -17,8 +17,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NetCoreWebApiPoC.Application\NetCoreWebApiPoC.Application.csproj" />
-    <ProjectReference Include="..\NetCoreWebApiPoC.Persistence\NetCoreWebApiPoC.Persistence.csproj" />
+    <ProjectReference Include="..\..\src\NetCoreWebApiPoC.Application\NetCoreWebApiPoC.Application.csproj" />
+    <ProjectReference Include="..\..\src\NetCoreWebApiPoC.Persistence\NetCoreWebApiPoC.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

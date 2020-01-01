@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NetCoreWebApiPoC.WebUI\NetCoreWebApiPoC.WebUI.csproj" />
+    <ProjectReference Include="..\..\src\NetCoreWebApiPoC.WebUI\NetCoreWebApiPoC.WebUI.csproj" />
   </ItemGroup>
 
 </Project>
