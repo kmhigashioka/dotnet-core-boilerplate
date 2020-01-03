@@ -2,11 +2,11 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Application.Dto;
 using Application.Todos.Commands.NewTodo;
 using Application.Todos.Queries.GetTodos;
 using Domain.Entities;
 using System.Collections.Generic;
+using Application.Common.Dtos;
 
 namespace WebUI.Controllers
 {

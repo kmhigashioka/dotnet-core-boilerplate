@@ -1,9 +1,9 @@
 ﻿using System;
+using Application.Common.Interfaces;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Application.Interfaces;
 using Persistence;
 
 namespace WebUI

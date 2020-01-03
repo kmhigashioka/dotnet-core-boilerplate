@@ -1,4 +1,5 @@
 ﻿using Application;
+using Application.Common.Interfaces;
 using IdentityServer4.AccessTokenValidation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -7,7 +8,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Application.Interfaces;
 using Domain.Entities;
 using WebUI.Configuration;
 using AppContext = Persistence.AppContext;

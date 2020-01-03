@@ -1,8 +1,8 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
+using Application.Common.Dtos;
+using Application.Common.Interfaces;
 using MediatR;
-using Application.Dto;
-using Application.Interfaces;
 using Domain.Entities;
 using Omu.ValueInjecter;
 

@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using Application.Common.Interfaces;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Moq;
-using Application.Interfaces;
 using Application.Todos.Commands.NewTodo;
 using Application.Todos.Queries.GetTodos;
 using Domain.Entities;

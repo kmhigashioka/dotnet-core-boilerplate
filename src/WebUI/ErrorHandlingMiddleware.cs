@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Net;
 using System.Threading.Tasks;
+using Application.Common.Exceptions;
 using Microsoft.AspNetCore.Http;
-using Application.Exceptions;
 using Newtonsoft.Json;
 
 namespace WebUI
