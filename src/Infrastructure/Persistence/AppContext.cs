@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Domain.Entities;
+using Infrastructure.Identity;
 
 namespace Infrastructure.Persistence
 {
