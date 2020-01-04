@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Application.Dto
+namespace Application.Common.Dtos
 {
     public class TodoDto
     {

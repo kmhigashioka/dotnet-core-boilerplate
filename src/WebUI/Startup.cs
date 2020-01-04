@@ -1,6 +1,8 @@
-﻿using System.Reflection;
+﻿using Application;
+using Application.Common.Interfaces;
+using Domain.Entities;
 using IdentityServer4.AccessTokenValidation;
-using MediatR;
+using Infrastructure.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -8,11 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Application.Interfaces;
-using Application.Todos.Commands.NewTodo;
-using Domain.Entities;
 using WebUI.Configuration;
-using Infrastructure.Persistence;
 
 namespace WebUI
 {
@@ -31,7 +29,7 @@ namespace WebUI
             services.AddDbContext<AppContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMvc(options => options.EnableEndpointRouting = false)
                 .AddNewtonsoftJson();
-            services.AddMediatR(typeof(NewTodoCommand).GetTypeInfo().Assembly);
+            services.AddApplication();
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<AppContext>()
                 .AddDefaultTokenProviders();

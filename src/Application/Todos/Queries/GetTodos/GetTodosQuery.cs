@@ -2,8 +2,8 @@
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Application.Common.Interfaces;
 using MediatR;
-using Application.Interfaces;
 using Domain.Entities;
 using Omu.ValueInjecter;
 

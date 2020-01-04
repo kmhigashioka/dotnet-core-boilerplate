@@ -1,8 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Domain.Entities;
 
-namespace Application.Interfaces
+namespace Application.Common.Interfaces
 {
     public interface IAppContext
     {
