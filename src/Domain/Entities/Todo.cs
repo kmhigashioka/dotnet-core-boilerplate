@@ -2,7 +2,7 @@
 
 namespace Domain.Entities
 {
-    public class Todo
+    public class Todo: AuditableEntity
     {
         public int Id { get; set; }
         public string Task { get; set; }

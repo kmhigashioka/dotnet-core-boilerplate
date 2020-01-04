@@ -1,5 +1,4 @@
 ﻿using Application.Common.Interfaces;
-using Domain.Entities;
 using IdentityServer4.AccessTokenValidation;
 using Infrastructure.Identity;
 using Infrastructure.Persistence;
@@ -40,6 +39,7 @@ namespace Infrastructure
                     options.ApiName = "api1";
                 });
             services.AddScoped<IAppContext>(provider => provider.GetService<AppContext>());
+            services.AddTransient<IDateTime, DateTimeService>();
             return services;
         }
     }
