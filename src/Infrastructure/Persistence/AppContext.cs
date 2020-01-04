@@ -38,12 +38,4 @@ namespace Infrastructure.Persistence
             return base.SaveChanges();
         }
     }
-
-    public static class DbInitializer
-    {
-        public static void Initialize(IAppContext context)
-        {
-            context.Database.EnsureCreated();
-        }
-    }
 }

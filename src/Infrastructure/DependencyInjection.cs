@@ -15,7 +15,10 @@ namespace Infrastructure
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<AppContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<AppContext>(
+                options => options.UseSqlServer(
+                    configuration.GetConnectionString("DefaultConnection"),
+                    b => b.MigrationsAssembly(typeof(AppContext).Assembly.FullName)));
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<AppContext>()
                 .AddDefaultTokenProviders();
