@@ -1,13 +1,8 @@
 ﻿using System.Collections.Generic;
-using System.Security.Claims;
-using System.Threading.Tasks;
 using IdentityServer4;
 using IdentityServer4.Models;
-using IdentityServer4.Services;
-using Microsoft.AspNetCore.Identity;
-using Domain.Entities;
 
-namespace WebUI.Configuration
+namespace Infrastructure.Identity
 {
     public class Config
     {
@@ -72,39 +67,6 @@ namespace WebUI.Configuration
                 },
                 new ApiResource("api1")
             };
-        }
-    }
-
-    public class ProfileService : IProfileService
-    {
-        private readonly UserManager<ApplicationUser> _userManager;
-
-        public ProfileService(UserManager<ApplicationUser> userManager)
-        {
-            _userManager = userManager;
-        }
-
-        public Task GetProfileDataAsync(ProfileDataRequestContext context)
-        {
-            var user = _userManager.GetUserAsync(context.Subject).Result;
-
-            var claims = new List<Claim>
-            {
-                new Claim("username", user.UserName),
-            };
-
-            context.IssuedClaims.AddRange(claims);
-            
-            return Task.FromResult(0);
-        }
-
-        public Task IsActiveAsync(IsActiveContext context)
-        {
-            var user = _userManager.GetUserAsync(context.Subject).Result;
-
-            context.IsActive = user != null;
-            
-            return Task.FromResult(0);
         }
     }
 }

@@ -1,16 +1,10 @@
 ﻿using Application;
-using Application.Common.Interfaces;
-using Domain.Entities;
-using IdentityServer4.AccessTokenValidation;
-using Infrastructure.Persistence;
+using Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using WebUI.Configuration;
 
 namespace WebUI
 {
@@ -26,35 +20,12 @@ namespace WebUI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<AppContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMvc(options => options.EnableEndpointRouting = false)
                 .AddNewtonsoftJson();
             services.AddApplication();
-            services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<AppContext>()
-                .AddDefaultTokenProviders();
+            services.AddInfrastructure(Configuration);
             services.AddMvcCore()
                 .AddAuthorization();
-            services.AddIdentityServer()
-                .AddInMemoryIdentityResources(Config.GetIdentityResources())
-                .AddInMemoryClients(Config.GetClients())
-                .AddInMemoryApiResources(Config.GetApiResources())
-                .AddDeveloperSigningCredential()
-                .AddAspNetIdentity<ApplicationUser>()
-                .AddProfileService<ProfileService>();
-            services
-                .AddAuthentication(options =>
-                {
-                    options.DefaultAuthenticateScheme = IdentityServerAuthenticationDefaults.AuthenticationScheme;
-                    options.DefaultChallengeScheme = IdentityServerAuthenticationDefaults.AuthenticationScheme;
-                })
-                .AddIdentityServerAuthentication(options =>
-                {
-                    options.Authority = "http://localhost:9340";
-                    options.RequireHttpsMetadata = false;
-                    options.ApiName = "api1";
-                });
-            services.AddScoped<IAppContext>(provider => provider.GetService<AppContext>());
             services.AddSwaggerGen(provider => 
                 provider.SwaggerDoc("latest", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Core API", Description = "Swagger Core API" }
             ));
