@@ -18,7 +18,7 @@ namespace Application.Tests.Todos.Queries
         [Fact]
         public void Get_Todos()
         {
-            var mockContext = new Mock<IAppContext>();
+            var mockContext = new Mock<IApplicationDbContext>();
             var mockDbSetTodos = new List<Todo>
             {
                 new Todo
@@ -44,7 +44,7 @@ namespace Application.Tests.Todos.Queries
             Assert.Equal(2, result.Result.Count);
         }
 
-        private static IMediator BuildMediator(IAppContext context)
+        private static IMediator BuildMediator(IApplicationDbContext context)
         {
             var services = new ServiceCollection();
 

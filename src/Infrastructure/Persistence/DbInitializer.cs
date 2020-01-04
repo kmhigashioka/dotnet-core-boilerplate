@@ -5,7 +5,7 @@ namespace Infrastructure.Persistence
 {
     public static class DbInitializer
     {
-        public static void Initialize(IAppContext context)
+        public static void Initialize(IApplicationDbContext context)
         {
             context.Database.Migrate();
         }

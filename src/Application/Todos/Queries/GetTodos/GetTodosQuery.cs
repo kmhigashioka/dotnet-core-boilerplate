@@ -16,9 +16,9 @@ namespace Application.Todos.Queries.GetTodos
 
     public class GetTodosQueryHandler : IRequestHandler<GetTodosQuery, List<Todo>>
     {
-        private readonly IAppContext _context;
+        private readonly IApplicationDbContext _context;
 
-        public GetTodosQueryHandler(IAppContext context)
+        public GetTodosQueryHandler(IApplicationDbContext context)
         {
             _context = context;
         }
