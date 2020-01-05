@@ -31,6 +31,7 @@ namespace WebUI
             services.AddSwaggerGen(provider => 
                 provider.SwaggerDoc("latest", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Core API", Description = "Swagger Core API" }
             ));
+            services.AddSpaStaticFiles(configuration => configuration.RootPath = "ClientApp/build");
             services.AddScoped<ICurrentUserService, CurrentUserService>();
         }
 
@@ -42,6 +43,11 @@ namespace WebUI
                 app.UseDeveloperExceptionPage();
             }
 
+            if (!env.IsDevelopment())
+            {
+                app.UseSpaStaticFiles();
+            }
+
             app.UseAuthentication();
             app.UseIdentityServer();
             app.UseMiddleware(typeof(ErrorHandlingMiddleware));
@@ -50,9 +56,17 @@ namespace WebUI
             app.UseSwaggerUI(p =>
             {
                 p.SwaggerEndpoint("/swagger/latest/swagger.json", "default");
-                p.RoutePrefix = string.Empty;
+                p.RoutePrefix = "api";
             });
-            app.UseFileServer();
+            app.UseSpa(spa =>
+            {
+                spa.Options.SourcePath = "ClientApp";
+
+                if (env.IsDevelopment())
+                {
+                    spa.UseProxyToSpaDevelopmentServer("http://localhost:3000");
+                }
+            });
         }
     }
 }
