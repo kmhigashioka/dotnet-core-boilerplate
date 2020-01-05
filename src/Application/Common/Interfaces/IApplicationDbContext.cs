@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace Application.Common.Interfaces
 {
-    public interface IAppContext
+    public interface IApplicationDbContext
     {
         DbSet<Todo> Todos { get; set; }
         int SaveChanges();

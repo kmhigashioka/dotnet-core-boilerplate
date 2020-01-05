@@ -19,7 +19,7 @@ namespace WebUI
                 var services = scope.ServiceProvider;
                 try
                 {
-                    var context = services.GetRequiredService<IAppContext>();
+                    var context = services.GetRequiredService<IApplicationDbContext>();
                     DbInitializer.Initialize(context);
                 }
                 catch (Exception ex)

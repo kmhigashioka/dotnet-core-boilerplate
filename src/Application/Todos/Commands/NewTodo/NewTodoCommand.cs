@@ -15,9 +15,9 @@ namespace Application.Todos.Commands.NewTodo
 
     public class NewTodoCommandHandler : IRequestHandler<NewTodoCommand, TodoDto>
     {
-        private readonly IAppContext _context;
+        private readonly IApplicationDbContext _context;
 
-        public NewTodoCommandHandler(IAppContext context)
+        public NewTodoCommandHandler(IApplicationDbContext context)
         {
             _context = context;
         }

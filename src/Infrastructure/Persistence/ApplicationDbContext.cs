@@ -6,12 +6,12 @@ using Infrastructure.Identity;
 
 namespace Infrastructure.Persistence
 {
-    public class AppContext : IdentityDbContext<ApplicationUser>, IAppContext
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IApplicationDbContext
     {
         private readonly IDateTime _dateTimeService;
         private readonly ICurrentUserService _currentUserService;
 
-        public AppContext(DbContextOptions<AppContext> options, IDateTime dateTimeService, ICurrentUserService currentUserService) : base(options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options, IDateTime dateTimeService, ICurrentUserService currentUserService) : base(options)
         {
             _dateTimeService = dateTimeService;
             _currentUserService = currentUserService;
@@ -36,14 +36,6 @@ namespace Infrastructure.Persistence
                 }
             }
             return base.SaveChanges();
-        }
-    }
-
-    public static class DbInitializer
-    {
-        public static void Initialize(IAppContext context)
-        {
-            context.Database.EnsureCreated();
         }
     }
 }
