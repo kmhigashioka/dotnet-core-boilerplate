@@ -43,6 +43,7 @@ namespace Infrastructure
                 });
             services.AddScoped<IApplicationDbContext>(provider => provider.GetService<ApplicationDbContext>());
             services.AddTransient<IDateTime, DateTimeService>();
+            services.AddTransient<IIdentityService, IdentityService>();
             return services;
         }
     }
