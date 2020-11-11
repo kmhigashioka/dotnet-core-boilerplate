@@ -27,7 +27,6 @@ namespace Infrastructure.Services
         {
             var user = new ApplicationUser
             {
-                FullName = userDto.FullName,
                 Email = userDto.UserName,
                 UserName = userDto.UserName
             };
